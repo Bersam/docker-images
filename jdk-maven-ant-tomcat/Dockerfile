@@ -8,7 +8,7 @@ FROM guligo/jdk-maven-ant:latest
 
 ENV TOMCAT_MAJOR 8
 ENV TOMCAT_VERSION 8.0.24
-ENV TOMCAT_HOME /etc/tomcat-${TOMCAT_VERSION}
+ENV TOMCAT_HOME /opt/tomcat-${TOMCAT_VERSION}
 
 # Installation
 
