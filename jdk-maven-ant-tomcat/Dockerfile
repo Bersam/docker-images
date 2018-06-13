@@ -1,4 +1,6 @@
-FROM guligo/jdk-maven-ant:latest
+FROM bersam/jdk-maven-ant:latest
+
+LABEL maintainer="bersam.k@gmail.com"
 
 ########
 # Tomcat
@@ -7,8 +9,9 @@ FROM guligo/jdk-maven-ant:latest
 # Preparation
 
 ENV TOMCAT_MAJOR 8
-ENV TOMCAT_VERSION 8.0.24
+ENV TOMCAT_VERSION 8.0.52
 ENV TOMCAT_HOME /opt/tomcat-${TOMCAT_VERSION}
+ENV PORT 8080
 
 # Installation
 
@@ -29,6 +32,5 @@ RUN unset TOMCAT_HOME
 
 # Execution
 
-EXPOSE 8080
+EXPOSE ${PORT}
 CMD ["catalina.sh", "run"]
-

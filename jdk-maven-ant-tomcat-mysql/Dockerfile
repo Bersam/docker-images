@@ -1,4 +1,6 @@
-FROM guligo/jdk-maven-ant-tomcat:latest
+FROM bersam/jdk-maven-ant-tomcat:latest
+
+LABEL maintainer="bersam.k@gmail.com"
 
 #######
 # MySQL
@@ -6,8 +8,8 @@ FROM guligo/jdk-maven-ant-tomcat:latest
 
 # Preparation
 
-ENV MYSQL_MAJOR 5.6
-ENV MYSQL_VERSION 5.6.25
+ENV MYSQL_MAJOR 5.7
+ENV MYSQL_VERSION 5.7.22
 
 # Installation
 
