@@ -1,5 +1,7 @@
 FROM debian:jessie
 
+LABEL maintainer="bersam.k@gmail.com"
+
 USER root
 RUN apt-get update
 RUN apt-get install -y wget
