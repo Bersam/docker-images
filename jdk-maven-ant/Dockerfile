@@ -10,8 +10,9 @@ RUN apt-get install -y wget
 
 # Preparation
 
-ENV JAVA_VERSION 8u45
-ENV JAVA_BUILD 14
+ENV JAVA_VERSION 8u172
+ENV JAVA_BUILD 11
+ENV JAVA_COMMIT a58eab1ec242421181065cdc37240b08
 ENV JAVA_HOME /opt/jdk-${JAVA_VERSION}-b${JAVA_BUILD}
 
 # Installation
@@ -34,7 +35,7 @@ RUN unset JAVA_VERSION
 
 # Preparation
 
-ENV MAVEN_VERSION 3.2.3
+ENV MAVEN_VERSION 3.5.3
 ENV MAVEN_HOME /opt/maven-${MAVEN_VERSION}
 
 # Installation
@@ -57,7 +58,7 @@ RUN unset MAVEN_VERSION
 
 # Preparation
 
-ENV ANT_VERSION 1.9.5
+ENV ANT_VERSION 1.9.11
 ENV ANT_HOME /opt/ant-${ANT_VERSION}
 
 # Installation
@@ -83,4 +84,3 @@ RUN java -version
 RUN javac -version
 RUN mvn -version
 RUN ant -version
-
