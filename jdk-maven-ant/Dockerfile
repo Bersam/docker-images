@@ -20,7 +20,7 @@ ENV JAVA_HOME /opt/jdk-${JAVA_VERSION}-b${JAVA_BUILD}
 # Installation
 
 RUN cd /tmp
-RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}-linux-x64.tar.gz
+RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}-b${JAVA_BUILD}/${JAVA_COMMIT}/jdk-${JAVA_VERSION}-linux-x64.tar.gz
 RUN mkdir jdk-${JAVA_VERSION}-linux-x64
 RUN tar -zxvf jdk-${JAVA_VERSION}-linux-x64.tar.gz --directory jdk-${JAVA_VERSION}-linux-x64 --strip-components=1
 RUN mv jdk-${JAVA_VERSION}-linux-x64 ${JAVA_HOME}
